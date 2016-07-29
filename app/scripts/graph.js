@@ -2,7 +2,7 @@ google.charts.load('current', {'packages':['corechart', 'treemap', 'gauge']});
 
 
 google.charts.setOnLoadCallback(drawLifeChart);
-google.charts.setOnLoadCallback(drawGaugeChart);
+      google.charts.setOnLoadCallback(drawGaugeChart);
 
 
       function drawLifeChart() {
@@ -37,14 +37,14 @@ google.charts.setOnLoadCallback(drawGaugeChart);
         highlightOnMouseOver: true,
         maxDepth: 1,
         maxPostDepth: 2,
-        /*
+      /*
         minHighlightColor: '#8c6bb1',
         midHighlightColor: '#9ebcda',
         maxHighlightColor: '#edf8fb',
         minColor: '#145ECC',
         midColor: '#B22411',
         maxColor: '#C8FF19',
-        */
+       */
         headerHeight: 30,
         showScale: false,
         height: 500,
@@ -64,7 +64,7 @@ google.charts.setOnLoadCallback(drawGaugeChart);
         ]);
 
         var options = {
-          width: 400, height: 120,
+          width: 900, height: 500,
           redFrom: 90, redTo: 100,
           yellowFrom:75, yellowTo: 90,
           minorTicks: 5

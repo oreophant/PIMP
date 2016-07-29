@@ -16,6 +16,7 @@ angular.module('pimp')
 
       return false;
     };
+
     $scope.quote= function(){
 
       var quotes= [
