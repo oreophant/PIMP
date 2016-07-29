@@ -43,6 +43,20 @@ angular
             parent: 'dashboard',
             templateUrl: 'views/dashboard/overview.html'
           })
+          .state('test', {
+            url: '/test',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/test.html',
+            controller: function($scope, $location){
+              $scope.user = {
+                name: 4200,
+                email: 5500,
+                gender: 24
+              },
+              $scope.next = function(){
+                $location.path('/dashboard');
+            }}
+          })
           .state('reports', {
             url: '/reports',
             parent: 'dashboard',
