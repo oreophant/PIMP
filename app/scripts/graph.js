@@ -2,6 +2,7 @@ google.charts.load('current', {'packages':['corechart', 'treemap', 'gauge']});
 
 
 google.charts.setOnLoadCallback(drawLifeChart);
+      google.charts.setOnLoadCallback(drawPieChart);
       google.charts.setOnLoadCallback(drawGaugeChart);
 
 
@@ -101,6 +102,32 @@ google.charts.setOnLoadCallback(drawLifeChart);
       };
 
 
+      function drawPieChart() {
+        data=new google.visualization.DataTable();
+        data.addColumn('string','Task')
+        data.addColumn('number','Hours')
+        data.addColumn({type:'string',role:'tooltip'})
+
+        data.addRows([
+          ['Work',     11,'work tooltip'],
+          ['Eat',      2, 'tooltip'],
+          ['Commute',  2, 'this is a tooltip'],
+          ['Watch TV', 2, 'this is a tooltip'],
+          ['Sleep',    7, 'this is a tooltip']
+        ])
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+          tooltip:{isHtml:true}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      };
+
+
+
+
       function drawGaugeChart() {
 
         var data = google.visualization.arrayToDataTable([
@@ -109,7 +136,7 @@ google.charts.setOnLoadCallback(drawLifeChart);
         ]);
 
         var options = {
-          width: 900, height: 500,
+          width: 700, height: 400,
           redFrom: 90, redTo: 100,
           yellowFrom:75, yellowTo: 90,
           minorTicks: 5
