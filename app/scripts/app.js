@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+
+
 angular
   .module('pimp', [
     'ui.router',
@@ -45,6 +47,21 @@ angular
             url: '/reports',
             parent: 'dashboard',
             templateUrl: 'views/dashboard/reports.html'
+          })
+          .state('housing', {
+            url: '/housing',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/housing.html'
+          })
+          .state('marriage', {
+            url: '/marriage',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/marriage.html'
+          })
+          .state('retirement', {
+            url: '/retirement',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/retirement.html'
           });
 
   });

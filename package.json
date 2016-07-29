@@ -12,6 +12,7 @@
     "connect": "^3.3.4",
     "connect-livereload": "^0.5.3",
     "del": "^1.1.1",
+    "gravatar": "^1.5.2",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-cache": "^0.2.8",
@@ -34,8 +35,9 @@
     "gulp-size": "^1.2.1",
     "gulp-uglify": "^1.1.0",
     "gulp-useref": "^1.1.1",
+    "jasmine-core": "^2.4.1",
     "jshint-stylish": "^1.0.1",
-    "karma": "^0.12.31",
+    "karma": "^0.12.37",
     "karma-jasmine": "^0.3.5",
     "karma-phantomjs-launcher": "^0.1.4",
     "lazypipe": "^0.2.2",
@@ -48,5 +50,7 @@
     "wiredep": "^2.2.2",
     "yargs": "^3.3.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gravatar": "^1.5.2"
+  }
 }
