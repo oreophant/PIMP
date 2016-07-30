@@ -1,9 +1,16 @@
 <div class="jumbotron">
-  <form novalidate class="simple-form">
-    House Price: <input type="text" ng-model="user.housePrice" /><br />
-    Tenure Years: <input type="number" ng-model="user.tenureYears" /><br />
-    Number of outstanding loans: <input type="number" ng-model="user.oStandingLoans" /><br />
-    <input type="submit" ng-click="next()" value="Save" />
-    <p>{{user.oStandingLoans}} {{user.housePrice}}</p>
+  <form novalidate class="simple-form" style="text-align='justify'">
+    House Price: <input type="text" ng-model="user.housePrice" placeholder="House Price"/><br />
+    Tenure Years: <input type="text" ng-model="user.tenureYears" placeholder="Tenure Years" /><br />
+    Number of outstanding loans: <input type="text" ng-model="user.oStandingLoans" placeholder="Outstanding Loans"/><br />
+    <input type="submit" ng-click="user.dank()" value="Calculate" />
+
+<div class="jumbotron">
+    <p>{{user.dankResult1}}</p>
+    <p>{{user.dankResult2}}</p>
+    <p>{{user.dankResult3}}</p>
+    <p>{{user.dankResult4}}</p>
+    <p>{{user.dankResult5}}</p>
+  </div>
   </form>
 </div>

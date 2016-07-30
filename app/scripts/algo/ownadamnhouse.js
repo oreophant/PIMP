@@ -123,4 +123,6 @@ function getHouse(pr, ty, osl){
         "Total amount paid:"+ loan_info.loanAmount*((loan_info.interestRate/1200)/(1-Math.pow((1+loan_info.interestRate/1200),-(loan_info.tenureYears*12)))*loan_info.tenureYears*12+instantPayment;
 
 
-}
+};
+
+$scope.user.dankResult = getHouse($scope.user.housePrice, $scope.user.tenureYears, $scope.user.oStandingLoans);
