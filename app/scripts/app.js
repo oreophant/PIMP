@@ -47,16 +47,34 @@ angular
             url: '/test',
             parent: 'dashboard',
             templateUrl: 'views/dashboard/test.html',
-            controller: function($scope, $location){
-              $scope.user = {
-                name: 4200,
-                email: 5500,
-                gender: 24
-              },
-              $scope.next = function(){
-                $location.path('/dashboard');
-            }}
+            controller: ["$scope", function($scope){
+
+
+
+              $scope.user={
+
+                housePrice: 1,
+                tenureYears: 1,
+                oStandingLoans: 1
+              }
+              ;
+
+            $scope.next = function(){
+              $location.path('/dashboard');
+            };
+
+            // use factory methods here
+
+
+
+
+
+
+
+
+          }]
           })
+
           .state('reports', {
             url: '/reports',
             parent: 'dashboard',
@@ -76,6 +94,7 @@ angular
             url: '/retirement',
             parent: 'dashboard',
             templateUrl: 'views/dashboard/retirement.html'
-          });
 
-  });
+          }
+        );
+      })

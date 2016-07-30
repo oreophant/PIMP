@@ -1,10 +1,9 @@
 <div class="jumbotron">
   <form novalidate class="simple-form">
-    Name: <input type="text" ng-model="user.name" /><br />
-    E-mail: <input type="email" ng-model="user.email" /><br />
-    Gender: <input type="radio" ng-model="user.gender" value="male" />male
-    <input type="radio" ng-model="user.gender" value="female" />female<br />
+    House Price: <input type="text" ng-model="user.housePrice" /><br />
+    Tenure Years: <input type="number" ng-model="user.tenureYears" /><br />
+    Number of outstanding loans: <input type="number" ng-model="user.oStandingLoans" /><br />
     <input type="submit" ng-click="next()" value="Save" />
-    <p>{{user.gender}} {{user.email}}</p>
+    <p>{{user.oStandingLoans}} {{user.housePrice}}</p>
   </form>
 </div>

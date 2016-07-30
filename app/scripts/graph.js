@@ -71,22 +71,22 @@ google.charts.setOnLoadCallback(drawLifeChart);
                                   var descriptions={
                                     lifePlanner: "Left click to view in depth, right click to go back.",
                                     houseOwnership : "Owning a property is an expensive option</br> in Singapore.Proceed with caution.",
-                                    marriage:"",
-                                    retirement:"",
-                                    housePrice:"",
-                                    stampduty:"",
-                                    estateAgent:"Payment to the Estate Agent",
-                                    additionalStampDuty:"",
-                                    insurance:"",
+                                    marriage:"Marriage can provide tax rebates.",
+                                    retirement:"Always plan early for your retirement",
+                                    housePrice:"Keep a look out for housing Price!",
+                                    stampduty:"Be careful about your stampduties.",
+                                    estateAgent:"Consults Estate Agent",
+                                    additionalStampDuty:"Watch out for additional stamp duty",
+                                    insurance:"Insure to ensure a stable life",
                                     weddingOutfit:"Getting dressed for wedding",
-                                    locationBooking:"",
-                                    gifts:"",
+                                    locationBooking:"Pick the best location",
+                                    gifts:"Gift your best wishes",
                                     weddingBanquet:"Invite all your friends",
-                                    honeyMoon:"",
-                                    basicNeeds:"",
-                                    healthcare:"",
-                                    otherFactors1:"",
-                                    otherFactors2:"",
+                                    honeyMoon:"Holiday after marriage",
+                                    basicNeeds:"Food, water, air, etc.",
+                                    healthcare:"Do checkups regularly",
+                                    otherFactors1:"Such as religion",
+                                    otherFactors2:"Such as philosophy",
                                   };
 
                                   var currtext = camelize(currentOver);
@@ -104,16 +104,16 @@ google.charts.setOnLoadCallback(drawLifeChart);
 
       function drawPieChart() {
         data=new google.visualization.DataTable();
-        data.addColumn('string','Task')
-        data.addColumn('number','Hours')
+        data.addColumn('string','Expenses')
+        data.addColumn('number','Amount')
         data.addColumn({type:'string',role:'tooltip'})
 
         data.addRows([
-          ['Work',     11,'work tooltip'],
-          ['Eat',      2, 'tooltip'],
+          ['Housing Loans',     21,'work tooltip'],
+          ['Food',      2, 'tooltip'],
           ['Commute',  2, 'this is a tooltip'],
-          ['Watch TV', 2, 'this is a tooltip'],
-          ['Sleep',    7, 'this is a tooltip']
+          ['Investment', 12, 'this is a tooltip'],
+          ['holiday trips',    7, 'this is a tooltip']
         ])
         var options = {
           title: 'My Daily Activities',
