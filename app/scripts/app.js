@@ -215,12 +215,12 @@ angular
           .state('reports', {
             url: '/reports',
             parent: 'dashboard',
-            templateUrl: 'views/dashboard/reports.html'
+            templateUrl: 'views/dashboard/reports.html',
           })
           .state('taxes', {
             url: '/taxes',
             parent: 'dashboard',
-            templateUrl: 'views/dashboard/taxes.html'
+            templateUrl: 'views/dashboard/taxes.html',
           })
           .state('marriage', {
             url: '/marriage',
