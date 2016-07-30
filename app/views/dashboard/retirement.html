@@ -8,18 +8,26 @@
 		<div class="jumbotron">
 			
   <form novalidate class="simple-form" style="text-align='justify'">
-    Your Age: <input type="text" ng-model="user.housePrice" placeholder="Age"/><br />
-    Your current income: <input type="text" ng-model="user.tenureYears" placeholder="Income" /><br />
-    Number of outstanding loans: <input type="text" ng-model="user.oStandingLoans" placeholder="Outstanding Loans"/><br />
-    Occupation: <select name = 'Occupation'>
+    Your Age: <input type="text" ng-model="user.age" placeholder="Age"/><br />
+    Your current monthly income: <input type="text" ng-model="user.income" placeholder="Income" /><br />
+    Years of CPF Commitment: <input type="text" ng-model="user.commit" placeholder="CPF Contribution Years" /><br />
+    Occupation: <select name = 'Occupation' ng-model = "user.job">
     	<option value='1'>private sector employees and public sector non-pensionable employees</option>
     	<option value='2'>public sector pensionable employees</option>
     </select> <br/>
-    Property? <select name = "house">
+    Property? <select name = "house" ng-model='user.house'>
     	<option value="3">yes</option>
     	<option value="4">no</option>
     </select> <br/>
     <input type="submit" ng-click="user.getCPF()" value="Calculate" />
+   </form>
+   
+   <div class="jumbotron">
+    <p>You can get about ${{user.fiftyfive}} withdrawn at age 55!</p>
+    <p>You can get about ${{user.retired}} every month after you retire at age 65!</p>
+    <p>Spend your retirement money wisely!</p>
+    <p>{{user.warn}}</p>
+  </div>
 		</div>
 	</div>
 </div>

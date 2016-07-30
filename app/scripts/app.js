@@ -230,8 +230,105 @@ angular
           .state('retirement', {
             url: '/retirement',
             parent: 'dashboard',
-            templateUrl: 'views/dashboard/retirement.html'
+            templateUrl: 'views/dashboard/retirement.html',
+            controller: ["$scope", function($scope){
 
+              $scope.user={
+
+                age: "",
+                income: "",
+                job: "",
+                house: "",
+                commit: "",
+                getCPF: function(){
+                  getCPF($scope.user.age, $scope.user.income, $scope.user.job, $scope.user.house, $scope.user.commit);
+              }}
+              ;
+
+
+            function getCPF(age, income, job, house, commit){
+            var earn;
+            var sum;
+            var monthly;
+            
+            var basic = function(age){
+              return 80500 + (55-age) * 2500;
+            };
+            
+            if (age < 55 && job == 2)
+            {
+              earn == (37/100 * income);
+              sum == earn * (55 -age + commit) - basic;
+              $scope.user.fiftyfive == sum;
+              monthly == (basic + earn)/12;
+              $scope.user.retired == monthly;
+            }
+            else if (age >= 55 && age < 60 && job == 2)
+            {
+              earn == (26/100 * income);
+              sum == earn * (55 - commit) - basic;
+              $scope.user.fiftyfive ==sum;
+              monthly == (basic + earn)/ 12;
+              $scope.user.retired == monthly;
+            }
+            else if (age >= 60 && age < 65 && job == 2)
+            {
+              earn == (16.5/100 * income);
+              sum == earn * (55-commit) - basic;
+              $scope.user.fiftyfive == sum;
+              monthly == (basic + earn) / 12;
+              $scope.user.retired == monthly;
+            }
+            else if (age >= 65 && job == 2)
+            {
+              earn == (12.5/100 * income);
+              sum == earn * (55-commit) - basic;
+              $scope.user.fiftyfive == sum;
+              monthly == (basic + earn * (age - 55)) / 120;
+              $scope.user.retired == monthly;
+            }
+            else if (age < 55 && job == 1)
+            {
+              earn == (27.75/100 * income);
+              sum == earn * (55 -age + commit) - basic;
+              $scope.user.fiftyfive == sum;
+              monthly == (basic + earn)/12;
+              $scope.user.retired == monthly;
+            }
+            else if (age >= 55 && age < 60 && job == 1)
+            {
+              earn == (19.5/100 * income);
+              sum == earn * (55 - commit) - basic;
+              $scope.user.fiftyfive ==sum;
+              monthly == (basic + earn)/ 12;
+              $scope.user.retired == monthly;
+            }
+            else if(age >= 60 && age < 65 && job == 1)
+            {
+              earn == (12.375/100 * income);
+              sum == earn * (55-commit) - basic;
+              $scope.user.fiftyfive == sum;
+              monthly == (basic + earn) / 12;
+              $scope.user.retired == monthly;
+            }
+            else if (age >= 65 && job == 2)
+            {
+              earn == (9.375/100 * income);
+              sum == earn * (55-commit) - basic;
+              $scope.user.fiftyfive == sum;
+              monthly == (basic + earn * (age - 55)) / 120;
+              $scope.user.retired == monthly;
+            }
+            if (sum > 0 )
+            {
+              $scope.user.warn == "Good Job, you have more than enough money for retirement!";
+            }
+            if (sum <= 0 )
+            {
+              $scope.user.warn == "Using calculations, you will not save enough for retirement. Change a saving plan now or allocate less finance to other resources! \n use our app for more details on where to save!";
+            }
           }
-        );
-      })
+          }]
+ 
+      });
+  });
