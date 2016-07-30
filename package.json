@@ -51,6 +51,7 @@
     "yargs": "^3.3.1"
   },
   "dependencies": {
-    "gravatar": "^1.5.2"
+    "gravatar": "^1.5.2",
+    "gulp": "^3.9.1"
   }
 }

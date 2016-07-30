@@ -43,13 +43,11 @@ angular
             parent: 'dashboard',
             templateUrl: 'views/dashboard/overview.html'
           })
-          .state('test', {
-            url: '/test',
+          .state('housing', {
+            url: '/housing',
             parent: 'dashboard',
-            templateUrl: 'views/dashboard/test.html',
+            templateUrl: 'views/dashboard/housing.html',
             controller: ["$scope", function($scope){
-
-
 
               $scope.user={
 
@@ -219,10 +217,10 @@ angular
             parent: 'dashboard',
             templateUrl: 'views/dashboard/reports.html'
           })
-          .state('housing', {
-            url: '/housing',
+          .state('taxes', {
+            url: '/taxes',
             parent: 'dashboard',
-            templateUrl: 'views/dashboard/housing.html'
+            templateUrl: 'views/dashboard/taxes.html'
           })
           .state('marriage', {
             url: '/marriage',
